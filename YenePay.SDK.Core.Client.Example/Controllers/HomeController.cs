@@ -34,14 +34,14 @@ namespace YenePay.SDK.Core.Client.Example.Controllers
             {
                 new MoneyRecipient
                 {
-                    CustomerCode = "9358",
-                    EmailOrPhone = "+251911000011",
+                    CustomerCode = "<ADD ANOTHER CUSTOMER CODE>",
+                    EmailOrPhone = "<ADD THEIR EMAIL ACCOUNT/PHONE NUMBER>",
                     Amount = 10
                 },
                 new MoneyRecipient
                 {
-                    CustomerCode = "0325",
-                    EmailOrPhone = "airmax.7@gmail.com",
+                    CustomerCode = "<ADD ANOTHER CUSTOMER CODE>",
+                    EmailOrPhone = "<ADD THEIR EMAIL ACCOUNT/PHONE NUMBER>",
                     Amount = 8
                 }
         };
