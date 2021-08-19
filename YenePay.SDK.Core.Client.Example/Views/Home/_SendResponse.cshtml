@@ -1,0 +1,40 @@
+﻿@using System.Text.Json;
+@model YenePay.SDK.Core.Client.Models.SendMoneyResult
+<h3>Send Money Response</h3>
+<h5 class="text-muted">Http Status : @Model.HttpStatusCode</h5>
+@if (Model.IsError)
+{
+    <h4 class="text-danger">Error</h4>
+    <p class="text-danger">@Model.ErrorMessage</p>
+}
+@if (Model.SuccessResult != null)
+{
+ <h5>Summary</h5>
+<dl class="row">
+    <dt class="col-md-2">Status</dt>
+    <dd class="col-md-10">@Model.SuccessResult.StatusText</dd>
+    <dt class="col-md-2">Status Description</dt>
+    <dd class="col-md-10">@Model.SuccessResult.StatusDescription</dd>
+    @if (Model.ShouldManuallyContinue)
+    {
+        <dt class="col-md-2">Continue Manually</dt>
+        <dd class="col-md-10">Yes</dd>
+        <dt class="col-md-2">Continue Url</dt>
+        <dd class="col-md-10"><a href="@Model.ManualContinueUrl">@Model.ManualContinueUrl</a></dd>
+    }
+</dl>
+}
+<h5>Response JSON</h5>
+@{ 
+    var json = JsonSerializer.Serialize(Model, new JsonSerializerOptions
+    {
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        WriteIndented = true
+    });
+}
+<div class="row">
+    <pre class="col-md-10">
+@Html.Raw(json);
+</pre>
+</div>
+

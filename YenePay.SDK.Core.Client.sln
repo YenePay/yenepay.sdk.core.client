@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YenePay.SDK.Core.Client", "YenePay.SDK.Core.Client\YenePay.SDK.Core.Client.csproj", "{D2EF96AC-CDC6-482E-BB43-93E0D44B18FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YenePay.SDK.Core.Client.Example", "YenePay.SDK.Core.Client.Example\YenePay.SDK.Core.Client.Example.csproj", "{23410D9D-0AEE-4281-89F6-D26C477943B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D2EF96AC-CDC6-482E-BB43-93E0D44B18FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2EF96AC-CDC6-482E-BB43-93E0D44B18FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2EF96AC-CDC6-482E-BB43-93E0D44B18FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2EF96AC-CDC6-482E-BB43-93E0D44B18FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23410D9D-0AEE-4281-89F6-D26C477943B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23410D9D-0AEE-4281-89F6-D26C477943B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23410D9D-0AEE-4281-89F6-D26C477943B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23410D9D-0AEE-4281-89F6-D26C477943B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45B42C3B-17EE-427F-9867-3441BE1A44E8}
+	EndGlobalSection
+EndGlobal

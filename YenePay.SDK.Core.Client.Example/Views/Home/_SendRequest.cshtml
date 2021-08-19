@@ -1,0 +1,52 @@
+﻿@using System.Text.Json;
+@model YenePay.SDK.Core.Client.Models.SendMoneyRequest
+@{
+    var json = JsonSerializer.Serialize(Model, new JsonSerializerOptions
+    {
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+        WriteIndented = true
+    });
+}
+
+<h3>Send Money Request</h3>
+<dl>
+    <dt>Message To Recipients</dt>
+    <dd>@Model.MessageToRecipients</dd>
+</dl>
+<h5>Recipients</h5>
+<table class="table col-md-8">
+    <thead>
+        <tr>
+            <th>Email/Phone</th>
+            <th>Customer Code</th>
+            <th class="text-right">Amount (ETB)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var recipient in Model.Recipients)
+        {
+        <tr>
+            <td>@Html.Raw(recipient.EmailOrPhone)</td>
+            <td>@recipient.CustomerCode</td>
+            <td class="text-right">@recipient.Amount.ToString("N2")</td>
+        </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <th class="text-right" colspan="2">Total</th>
+            <th class="text-right">@Model.TotalPayment.ToString("N2")</th>
+        </tr>
+    </tfoot>
+</table>
+
+<dl>
+    <dt>Payer Signature</dt>
+    <dd><p>@Model.PayerSignature</p></dd>
+</dl>
+<h5>Request JSON</h5>
+<div class="row">
+    <pre class="col-md-10">
+@Html.Raw(json);
+</pre>
+</div>
