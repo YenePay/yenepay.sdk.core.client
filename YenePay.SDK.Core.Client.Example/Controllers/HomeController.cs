@@ -44,7 +44,7 @@ namespace YenePay.SDK.Core.Client.Example.Controllers
                     EmailOrPhone = "<ADD THEIR EMAIL ACCOUNT/PHONE NUMBER>",
                     Amount = 8
                 }
-        };
+            };
             
             var request = _yenePayService.CreateSignedRequest("Send Money Test", recipients);
             var result = await _yenePayService.SendMoney(request);
