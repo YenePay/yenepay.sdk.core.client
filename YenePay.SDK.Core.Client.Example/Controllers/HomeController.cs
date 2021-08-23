@@ -34,16 +34,9 @@ namespace YenePay.SDK.Core.Client.Example.Controllers
             {
                 new MoneyRecipient
                 {
-                    CustomerCode = "<ADD ANOTHER CUSTOMER CODE>",
-                    EmailOrPhone = "<ADD THEIR EMAIL ACCOUNT/PHONE NUMBER>",
+                    CustomerCode = "9358",
                     Amount = 10
                 },
-                new MoneyRecipient
-                {
-                    CustomerCode = "<ADD ANOTHER CUSTOMER CODE>",
-                    EmailOrPhone = "<ADD THEIR EMAIL ACCOUNT/PHONE NUMBER>",
-                    Amount = 8
-                }
             };
             
             var request = _yenePayService.CreateSignedRequest("Send Money Test", recipients);

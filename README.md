@@ -34,9 +34,13 @@ To send money you can use the following aspnet core code
     {
         new MoneyRecipient
         {
-            CustomerCode = "<ADD ANOTHER CUSTOMER CODE>",
-            EmailOrPhone = "<ADD THEIR EMAIL ACCOUNT/PHONE NUMBER>",
+            CustomerCode = "<ADD CUSTOMER CODE>",
             Amount = 10
+        },
+        new MoneyRecipient
+        {
+            CustomerCode = "<ADD ANOTHER CUSTOMER CODE>",
+            Amount = 18
         }
     };
             

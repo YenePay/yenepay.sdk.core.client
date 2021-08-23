@@ -21,8 +21,6 @@ namespace YenePay.SDK.Core.Client.Models
     public class MoneyRecipient
     {
         public string CustomerCode { get; set; }
-        [JsonPropertyName("email")]
-        public string EmailOrPhone { get; set; }
         public double Amount { get; set; }
     }
     public class SendMoneyValidationResponse

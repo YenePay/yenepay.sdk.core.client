@@ -17,7 +17,6 @@
 <table class="table col-md-8">
     <thead>
         <tr>
-            <th>Email/Phone</th>
             <th>Customer Code</th>
             <th class="text-right">Amount (ETB)</th>
         </tr>
@@ -26,7 +25,6 @@
         @foreach(var recipient in Model.Recipients)
         {
         <tr>
-            <td>@Html.Raw(recipient.EmailOrPhone)</td>
             <td>@recipient.CustomerCode</td>
             <td class="text-right">@recipient.Amount.ToString("N2")</td>
         </tr>
